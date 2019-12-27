@@ -1,0 +1,1294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundGrey"
+    tools:context=".screens.tabs.learn.MyBillActivity">
+
+    <include
+        android:id="@+id/include8"
+        layout="@layout/app_bar_general"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include8">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView2"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardBackgroundColor="@color/lightBlue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView29"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="16dp"
+                        android:contentDescription="@string/learn_my_bill"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_info_blue" />
+
+                    <TextView
+                        android:id="@+id/textView67"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/learn_my_bill_instruction"
+                        android:textColor="@color/primaryBlue"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView29"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:id="@+id/billContentsParent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/my_bill_background"
+                android:backgroundTint="@color/compGrey"
+                android:orientation="vertical"
+                android:padding="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/materialCardView2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="75dp">
+
+                    <ImageView
+                        android:id="@+id/imageView31"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:contentDescription="@string/learn_my_bill_electricity"
+                        android:tint="@color/compGrey"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="h,2:1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_my_bill_electric" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="@string/learn_my_bill_electricity"
+                        android:textAppearance="@style/AppTheme.MyBillTitle"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/imageView31"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/serviceAddressAnchor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="16dp"
+                        android:onClick="onClick"
+                        android:tag="serviceAddress"
+                        android:text="@string/learn_my_bill_address"
+                        android:textAppearance="@style/AppTheme.MyBillTitle.Link"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView70"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/learn_my_bill_address_example"
+                        android:textAlignment="viewEnd"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/serviceAddressAnchor"
+                        app:layout_constraintTop_toTopOf="@+id/serviceAddressAnchor" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="6dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/compGrey"
+                        app:layout_constraintEnd_toEndOf="@+id/textView70"
+                        app:layout_constraintStart_toStartOf="@+id/serviceAddressAnchor"
+                        app:layout_constraintTop_toBottomOf="@+id/textView70" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/siteIDAnchor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="16dp"
+                        android:onClick="onClick"
+                        android:tag="siteID"
+                        android:text="@string/site_id"
+                        android:textAppearance="@style/AppTheme.MyBillTitle.Link"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView72"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/learn_my_bill_site_id_example"
+                        android:textAlignment="viewEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/siteIDAnchor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/siteIDAnchor" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="6dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/compGrey"
+                        app:layout_constraintEnd_toEndOf="@+id/textView72"
+                        app:layout_constraintStart_toStartOf="@+id/siteIDAnchor"
+                        app:layout_constraintTop_toBottomOf="@+id/textView72" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/meterNumberAnchor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="16dp"
+                        android:onClick="onClick"
+                        android:tag="meterNumber"
+                        android:text="@string/learn_my_bill_meter_number"
+                        android:textAppearance="@style/AppTheme.MyBillTitle.Link"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView74"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/learn_my_bill_meter_example"
+                        android:textAlignment="viewEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/meterNumberAnchor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/meterNumberAnchor" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="6dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/compGrey"
+                        app:layout_constraintEnd_toEndOf="@+id/textView74"
+                        app:layout_constraintStart_toStartOf="@+id/meterNumberAnchor"
+                        app:layout_constraintTop_toBottomOf="@+id/textView74" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/meterReadAnchor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:onClick="onClick"
+                        android:tag="meterRead"
+                        android:text="@string/learn_my_bill_last_read"
+                        android:textAppearance="@style/AppTheme.MyBillTitle.Link"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/learn_my_bill_date_example"
+                        android:textAlignment="viewEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/meterReadAnchor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/meterReadAnchor" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/energyChargesAnchor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:onClick="onClick"
+                        android:tag="energyCharges"
+                        android:text="@string/learn_my_bill_charges_elec"
+                        android:textAppearance="@style/AppTheme.MyBillTitle.Link"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/TextView"
+                        style="@style/AppTheme.MyBillText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/learn_my_bill_retailer_name"
+                        app:layout_constraintStart_toStartOf="@id/energyChargesAnchor"
+                        app:layout_constraintTop_toBottomOf="@id/energyChargesAnchor" />
+
+                    <TextView
+                        android:id="@+id/textView75"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/learn_my_bill_dates_example"
+                        android:textAlignment="viewEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/TextView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/TextView" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="6dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/compGrey"
+                        app:layout_constraintEnd_toEndOf="@+id/textView75"
+                        app:layout_constraintStart_toStartOf="@+id/energyChargesAnchor"
+                        app:layout_constraintTop_toBottomOf="@+id/textView75" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView80"
+                        style="@style/AppTheme.MyBillTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="@string/learn_my_bill_total_charges_electric"
+                        app:layout_constraintBottom_toTopOf="@+id/divider20"
+                        app:layout_constraintStart_toStartOf="@+id/textView71"
+                        app:layout_constraintTop_toBottomOf="@+id/textView77" />
+
+                    <View
+                        android:id="@+id/divider20"
+                        android:layout_width="0dp"
+                        android:layout_height="6dp"
+                        android:background="@color/compGrey"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/textView81"
+                        app:layout_constraintStart_toStartOf="@+id/textView80" />
+
+                    <TextView
+                        android:id="@+id/textView71"
+                        style="@style/AppTheme.MyBillTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/learn_my_bill_kwh"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView77"
+                        style="@style/AppTheme.MyBillTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/learn_my_bill_admin_fee"
+                        app:layout_constraintStart_toStartOf="@+id/textView71"
+                        app:layout_constraintTop_toBottomOf="@+id/textView71" />
+
+                    <TextView
+                        android:id="@+id/textView73"
+                        style="@style/AppTheme.MyBillText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/learn_my_bill_dollars_example"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/textView71"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView71" />
+
+                    <TextView
+                        style="@style/AppTheme.MyBillText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/learn_my_bill_dollars_example"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/textView77"
+                        app:layout_constraintEnd_toEndOf="@+id/textView73"
+                        app:layout_constraintStart_toEndOf="@+id/textView77" />
+
+                    <TextView
+                        android:id="@+id/textView81"
+                        style="@style/AppTheme.MyBillText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/learn_my_bill_dollars_example"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/textView80"
+                        app:layout_constraintEnd_toEndOf="@+id/textView73"
+                        app:layout_constraintStart_toEndOf="@+id/textView80" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="6dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/compGrey"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/textView83"
+                        app:layout_constraintStart_toStartOf="@+id/textView82"
+                        app:layout_constraintTop_toBottomOf="@+id/textView84" />
+
+                    <TextView
+                        android:id="@+id/textView82"
+                        style="@style/AppTheme.MyBillTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/learn_my_bill_delivery_charges"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView83"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/learn_my_bill_dates_example"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/textView84"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView84" />
+
+                    <TextView
+                        android:id="@+id/textView84"
+                        style="@style/AppTheme.MyBillText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/learn_my_bill_atco_distro_elec"
+                        app:layout_constraintStart_toStartOf="@+id/textView82"
+                        app:layout_constraintTop_toBottomOf="@+id/textView82" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/distributionChargeAnchor"
+                        style="@style/AppTheme.MyBillTitle.Link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:onClick="onClick"
+                        android:tag="distributionCharge"
+                        android:text="@string/learn_my_bill_distro_charge"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        style="@style/AppTheme.MyBillText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/learn_my_bill_dollars_example"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/distributionChargeAnchor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/distributionChargeAnchor" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/transmissionChargeAnchor"
+                        style="@style/AppTheme.MyBillTitle.Link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:onClick="onClick"
+                        android:tag="transmissionCharge"
+                        android:text="@string/learn_my_bill_trans_charge"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        style="@style/AppTheme.MyBillText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/learn_my_bill_dollars_example"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/transmissionChargeAnchor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/transmissionChargeAnchor" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/rateRiderAnchor"
+                        style="@style/AppTheme.MyBillTitle.Link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:onClick="onClick"
+                        android:tag="rateRider"
+                        android:text="@string/learn_my_bill_rate_rider"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        style="@style/AppTheme.MyBillText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/learn_my_bill_dollars_example"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/rateRiderAnchor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/rateRiderAnchor" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/localAccessFeeAnchor"
+                        style="@style/AppTheme.MyBillTitle.Link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:onClick="onClick"
+                        android:tag="localAccessFee"
+                        android:text="@string/learn_my_bill_access_fee"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        style="@style/AppTheme.MyBillText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/learn_my_bill_dollars_example"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/localAccessFeeAnchor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/localAccessFeeAnchor" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        style="@style/AppTheme.MyBillTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="@string/learn_my_bill_total_delivery_charges"
+                        app:layout_constraintBottom_toTopOf="@id/divider22"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        style="@style/AppTheme.MyBillText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/learn_my_bill_dollars_example"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/textView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView" />
+
+                    <View
+                        android:id="@+id/divider22"
+                        android:layout_width="0dp"
+                        android:layout_height="6dp"
+                        android:background="@color/compGrey"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/textView7"
+                        app:layout_constraintStart_toStartOf="@+id/textView" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView85"
+                        style="@style/AppTheme.MyBillTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="32dp"
+                        android:text="@string/learn_my_bill_gst"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        style="@style/AppTheme.MyBillText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/learn_my_bill_dollars_example"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/textView85"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView85" />
+
+                    <TextView
+                        style="@style/AppTheme.MyBillText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/learn_my_bill_dollars_example"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/textView87"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView87" />
+
+                    <TextView
+                        android:id="@+id/textView87"
+                        style="@style/AppTheme.MyBillTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:text="@string/learn_my_bill_summary_total"
+                        app:layout_constraintStart_toStartOf="@+id/textView85"
+                        app:layout_constraintTop_toBottomOf="@+id/textView85" />
+
+                    <ImageView
+                        android:id="@+id/imageView32"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginEnd="40dp"
+                        android:layout_marginBottom="64dp"
+                        android:contentDescription="@string/learn_my_bill"
+                        android:scaleType="fitCenter"
+                        android:tint="@color/compGrey"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView87"
+                        app:srcCompat="@drawable/ic_my_bill_graph" />
+
+                    <TextView
+                        style="@style/AppTheme.MyBillTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/learn_my_bill_january"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView32"
+                        app:layout_constraintStart_toStartOf="@+id/imageView32" />
+
+                    <TextView
+                        style="@style/AppTheme.MyBillTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/learn_my_bill_august"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView32"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView32" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:contentDescription="@string/learn_my_bill_gas"
+                        android:tint="@color/compGrey"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="h,3:2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_my_bill_naturalgas" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="@string/learn_my_bill_gas"
+                        android:textAppearance="@style/AppTheme.MyBillTitle"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/imageView3"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/siteIDGas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="16dp"
+                        android:onClick="onClick"
+                        android:tag="siteID"
+                        android:text="@string/site_id"
+                        android:textAppearance="@style/AppTheme.MyBillTitle.Link"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/learn_my_bill_site_id_example"
+                        android:textAlignment="viewEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/siteIDGas"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/siteIDGas" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="6dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/compGrey"
+                        app:layout_constraintEnd_toEndOf="@+id/textView10"
+                        app:layout_constraintStart_toStartOf="@+id/siteIDGas"
+                        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/meterNumberGas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="16dp"
+                        android:onClick="onClick"
+                        android:tag="meterNumber"
+                        android:text="@string/learn_my_bill_meter_number"
+                        android:textAppearance="@style/AppTheme.MyBillTitle.Link"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/learn_my_bill_meter_example"
+                        android:textAlignment="viewEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/meterNumberGas"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/meterNumberGas" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="6dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/compGrey"
+                        app:layout_constraintEnd_toEndOf="@+id/textView9"
+                        app:layout_constraintStart_toStartOf="@+id/meterNumberGas"
+                        app:layout_constraintTop_toBottomOf="@+id/textView9"
+                        tools:ignore="TooManyViews" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/meterReadGas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:onClick="onClick"
+                        android:tag="meterRead"
+                        android:text="@string/learn_my_bill_last_read"
+                        android:textAppearance="@style/AppTheme.MyBillTitle.Link"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/learn_my_bill_date_example"
+                        android:textAlignment="viewEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/meterReadGas"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/meterReadGas" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/energyChargesGas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:onClick="onClick"
+                        android:tag="energyCharges"
+                        android:text="@string/learn_my_bill_charges_gas"
+                        android:textAppearance="@style/AppTheme.MyBillTitle.Link"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/TextView12"
+                        style="@style/AppTheme.MyBillText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/learn_my_bill_retailer_name"
+                        app:layout_constraintStart_toStartOf="@id/energyChargesGas"
+                        app:layout_constraintTop_toBottomOf="@id/energyChargesGas" />
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/learn_my_bill_dates_example"
+                        android:textAlignment="viewEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/TextView12"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/TextView12" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="6dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/compGrey"
+                        app:layout_constraintEnd_toEndOf="@+id/textView13"
+                        app:layout_constraintStart_toStartOf="@+id/energyChargesGas"
+                        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        style="@style/AppTheme.MyBillTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/learn_my_bill_kwh"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        style="@style/AppTheme.MyBillTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/learn_my_bill_admin_fee"
+                        app:layout_constraintStart_toStartOf="@+id/textView15"
+                        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        style="@style/AppTheme.MyBillTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="@string/learn_my_bill_total_charges_gas"
+                        app:layout_constraintBottom_toTopOf="@+id/divider14"
+                        app:layout_constraintStart_toStartOf="@+id/textView15"
+                        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+                    <View
+                        android:id="@+id/divider14"
+                        android:layout_width="0dp"
+                        android:layout_height="6dp"
+                        android:background="@color/compGrey"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/textView17"
+                        app:layout_constraintStart_toStartOf="@+id/textView15" />
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        style="@style/AppTheme.MyBillText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/learn_my_bill_dollars_example"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/textView15"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView15" />
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        style="@style/AppTheme.MyBillText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/learn_my_bill_dollars_example"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/textView16"
+                        app:layout_constraintEnd_toEndOf="@+id/textView17"
+                        app:layout_constraintStart_toEndOf="@+id/textView16" />
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        style="@style/AppTheme.MyBillText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/learn_my_bill_dollars_example"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/textView14"
+                        app:layout_constraintEnd_toEndOf="@+id/textView17"
+                        app:layout_constraintStart_toEndOf="@+id/textView14" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="6dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/compGrey"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/textView21"
+                        app:layout_constraintStart_toStartOf="@+id/textView20"
+                        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        style="@style/AppTheme.MyBillTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/learn_my_bill_delivery_charges"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/learn_my_bill_dates_example"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/textView22"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView22" />
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        style="@style/AppTheme.MyBillText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/learn_my_bill_atco_distro_gas"
+                        app:layout_constraintStart_toStartOf="@+id/textView20"
+                        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/fixedCharge"
+                        style="@style/AppTheme.MyBillTitle.Link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:onClick="onClick"
+                        android:tag="fixedDeliveryCharge"
+                        android:text="@string/learn_my_bill_fixed_charge"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        style="@style/AppTheme.MyBillText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/learn_my_bill_dollars_example"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/fixedCharge"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/fixedCharge" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/varCharge"
+                        style="@style/AppTheme.MyBillTitle.Link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:onClick="onClick"
+                        android:tag="variableDeliveryCharge"
+                        android:text="@string/learn_my_bill_variable_charge"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        style="@style/AppTheme.MyBillText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/learn_my_bill_dollars_example"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/varCharge"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/varCharge" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/rateRiderGas"
+                        style="@style/AppTheme.MyBillTitle.Link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:onClick="onClick"
+                        android:tag="rateRiderGas"
+                        android:text="@string/learn_my_bill_rate_rider"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        style="@style/AppTheme.MyBillText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/learn_my_bill_dollars_example"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/rateRiderGas"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/rateRiderGas" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/franchiseFee"
+                        style="@style/AppTheme.MyBillTitle.Link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:onClick="onClick"
+                        android:tag="municipalFranchiseFee"
+                        android:text="@string/learn_my_bill_franchise_fee"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        style="@style/AppTheme.MyBillText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/learn_my_bill_dollars_example"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/franchiseFee"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/franchiseFee" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView24"
+                        style="@style/AppTheme.MyBillTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="@string/learn_my_bill_total_delivery_charges"
+                        app:layout_constraintBottom_toTopOf="@id/divider23"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        style="@style/AppTheme.MyBillText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/learn_my_bill_dollars_example"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/textView24"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView24" />
+
+                    <View
+                        android:id="@+id/divider23"
+                        android:layout_width="0dp"
+                        android:layout_height="6dp"
+                        android:background="@color/compGrey"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/textView25"
+                        app:layout_constraintStart_toStartOf="@+id/textView24" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView31"
+                        style="@style/AppTheme.MyBillTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="32dp"
+                        android:text="@string/learn_my_bill_gst"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        style="@style/AppTheme.MyBillText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/learn_my_bill_dollars_example"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/textView31"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView31" />
+
+                    <TextView
+                        style="@style/AppTheme.MyBillText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/learn_my_bill_dollars_example"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/textView28"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView28" />
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        style="@style/AppTheme.MyBillTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:text="@string/learn_my_bill_summary_total"
+                        app:layout_constraintStart_toStartOf="@+id/textView31"
+                        app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+                    <ImageView
+                        android:id="@+id/imageView34"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginEnd="40dp"
+                        android:layout_marginBottom="32dp"
+                        android:contentDescription="@string/learn_my_bill"
+                        android:scaleType="fitCenter"
+                        android:tint="@color/compGrey"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView28"
+                        app:srcCompat="@drawable/ic_my_bill_graph" />
+
+                    <TextView
+                        style="@style/AppTheme.MyBillTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/learn_my_bill_january"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView34"
+                        app:layout_constraintStart_toStartOf="@+id/imageView34" />
+
+                    <TextView
+                        style="@style/AppTheme.MyBillTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/learn_my_bill_august"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView34"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView34" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

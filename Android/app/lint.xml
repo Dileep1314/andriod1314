@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="IconLocation">
+        <ignore path="src/main/res/layouts/common/drawable/atco_logo.png" />
+        <ignore path="src/main/res/layouts/learn/drawable/aeso.webp" />
+        <ignore path="src/main/res/layouts/learn/drawable/albertaenergy.webp" />
+        <ignore path="src/main/res/layouts/learn/drawable/auc.webp" />
+        <ignore path="src/main/res/layouts/learn/drawable/balancingpool.webp" />
+        <ignore path="src/main/res/layouts/learn/drawable/distributionowners.webp" />
+        <ignore path="src/main/res/layouts/learn/drawable/keyplayers.webp" />
+        <ignore path="src/main/res/layouts/learn/drawable/mockbill.webp" />
+        <ignore path="src/main/res/layouts/learn/drawable/msa.webp" />
+        <ignore path="src/main/res/layouts/learn/drawable/retailers.webp" />
+        <ignore path="src/main/res/layouts/learn/drawable/transmissionowners.webp" />
+        <ignore path="src/main/res/layouts/learn/drawable/uca.webp" />
+        <ignore path="src/main/res/layouts/reports/drawable/reports_main_famly_image.png" />
+        <ignore path="src/main/res/layouts/startup/drawable/onboarding0.webp" />
+        <ignore path="src/main/res/layouts/startup/drawable/onboarding1.webp" />
+        <ignore path="src/main/res/layouts/startup/drawable/onboarding2.webp" />
+        <ignore path="src/main/res/layouts/startup/drawable/onboarding3.webp" />
+    </issue>
+    <issue id="UnusedResources">
+        <ignore path="src/main/res/layouts/learn/drawable/aeso.webp" />
+        <ignore path="src/main/res/layouts/learn/drawable/albertaenergy.webp" />
+        <ignore path="src/main/res/layouts/learn/drawable/auc.webp" />
+        <ignore path="src/main/res/layouts/learn/drawable/balancingpool.webp" />
+        <ignore path="src/main/res/layouts/learn/drawable/distributionowners.webp" />
+        <ignore path="src/main/res/layouts/learn/drawable/generators.webp" />
+        <ignore path="src/main/res/layouts/learn/drawable/keyplayers.webp" />
+        <ignore path="src/main/res/layouts/learn/drawable/mockbill.webp" />
+        <ignore path="src/main/res/layouts/learn/drawable/msa.webp" />
+        <ignore path="src/main/res/layouts/learn/drawable/retailers.webp" />
+        <ignore path="src/main/res/layouts/learn/drawable/transmissionowners.webp" />
+        <ignore path="src/main/res/layouts/learn/drawable/uca.webp" />
+    </issue>
+</lint>

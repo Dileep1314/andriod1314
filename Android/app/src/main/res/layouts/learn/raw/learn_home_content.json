@@ -1,0 +1,14 @@
+{
+    "HomeListItems": [
+        {
+            "Title": "My Bill, Explained",
+            "Description": "Gain a deeper understanding for the fees included in your bill.",
+            "Icon": "mockbill"
+        },
+        {
+            "Title": "Key Industry Players",
+            "Description": "Explore the various groups involved with reliably bringing power to your home.",
+            "Icon": "keyplayers"
+        }
+    ]
+}

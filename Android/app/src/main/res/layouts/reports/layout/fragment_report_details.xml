@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundGrey">
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/app_bar_general"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/include2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:id="@+id/imageView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:contentDescription="@string/locations_add_site"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_progress_steps_2" />
+
+            <TextView
+                    android:id="@+id/textView36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/reports_details_issue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView22" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/generalQuestionLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toTopOf="@+id/streetlightQuestionLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/textView36"
+                    tools:layout_editor_absoluteX="32dp">
+
+                <TextView
+                        android:id="@+id/textView13"
+                        style="@style/AppTheme.InputTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reports_problem_type_title"
+                        app:layout_constraintStart_toStartOf="@+id/reportProblemTypeLayout"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/reportProblemTypeLayout"
+                        style="@style/AppTheme.InputDropdown"
+                        app:errorEnabled="false"
+                        app:helperTextEnabled="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView13">
+
+                    <AutoCompleteTextView
+                            android:id="@+id/reportProblemTypeSelect"
+                            style="@style/Base.Widget.MaterialComponents.AutoCompleteTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:maxLines="1"
+                            android:hint="@string/reports_problem_type_hint"
+                            android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/streetlightQuestionLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toBottomOf="@+id/generalQuestionLayout"
+                    tools:layout_editor_absoluteX="32dp"
+                    tools:visibility="gone">
+
+                <TextView
+                        android:id="@+id/textView14"
+                        style="@style/AppTheme.InputTitle"
+                        android:text="@string/reports_asset_id_optional"
+                        app:layout_constraintStart_toStartOf="@+id/textInputLayout3"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayout3"
+                        style="@style/AppTheme.Input"
+                        app:errorEnabled="false"
+                        app:helperTextEnabled="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView14">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/streetlightAssetID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/reports_asset_id_hint"
+                        android:inputType="textNoSuggestions"
+                        android:maxLines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/outageQuestionLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/streetlightQuestionLayout">
+
+                <TextView
+                    style="@style/AppTheme.InputTitle"
+                    android:text="@string/reports_power_off_now"
+                    app:layout_constraintBottom_toTopOf="@+id/reportOutagePowerOffGroup"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RadioGroup
+                    android:id="@+id/reportOutagePowerOffGroup"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    app:layout_constraintBottom_toTopOf="@+id/textView40"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <RadioButton
+                        android:id="@+id/reportOutagePowerOffYes"
+                        style="@style/AppTheme.BlueSquareCheckbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@color/white"
+                        android:text="@string/yes" />
+
+                    <RadioButton
+                        style="@style/AppTheme.BlueSquareCheckbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@color/white"
+                        android:text="@string/no" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/textView40"
+                    style="@style/AppTheme.InputTitle"
+                    android:text="@string/reports_reset_breaker"
+                    app:layout_constraintBottom_toTopOf="@+id/radioGroup2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <RadioButton
+                        style="@style/AppTheme.BlueSquareCheckbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@color/white"
+                        android:text="@string/yes" />
+
+                    <RadioButton
+                        style="@style/AppTheme.BlueSquareCheckbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@color/white"
+                        android:text="@string/no" />
+
+                </RadioGroup>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                    android:id="@+id/textView42"
+                    style="@style/AppTheme.InputTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/uniform_condensed_bold"
+                    android:text="@string/reports_comments_title"
+                    android:textAllCaps="true"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@+id/reportCommentsLayout"
+                    app:layout_constraintTop_toBottomOf="@id/outageQuestionLayout" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/reportCommentsLayout"
+                    style="@style/AppTheme.Input"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toTopOf="@id/reportOutageSubmitButton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView42"
+                    app:layout_constraintVertical_bias="0.0">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/reportOutageComments"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:gravity="start|top"
+                    android:hint="@string/reports_comments_hint"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="no"
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/reportOutageSubmitButton"
+                    style="@style/AppTheme.BottomBlueButton"
+                    android:text="@string/reports_submit"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

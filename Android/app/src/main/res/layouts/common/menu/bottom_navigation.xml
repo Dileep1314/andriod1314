@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_map"
+        android:icon="@drawable/ic_nav_locations"
+        android:orderInCategory="0"
+        android:title="@string/nav_location"/>
+
+    <item
+        android:id="@+id/navigation_reports"
+        android:icon="@drawable/ic_nav_reports"
+        android:orderInCategory="1"
+        android:title="@string/nav_reports"/>
+
+    <item
+        android:id="@+id/navigation_learn"
+        android:icon="@drawable/ic_nav_learn"
+        android:orderInCategory="2"
+        android:title="@string/nav_learn"/>
+
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/ic_nav_settings"
+        android:orderInCategory="3"
+        android:title="@string/nav_settings"/>
+
+</menu>

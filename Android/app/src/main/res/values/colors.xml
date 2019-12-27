@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="compDarkBlue" tools:ignore="UnusedResources">#0083AC</color>
+    <color name="primaryBlue">#0057B8</color>
+    <color name="compGreen">#00AAA4</color>
+    <color name="compGrey">#919191</color>
+    <color name="compLightBlue" tools:ignore="UnusedResources">#5CC5EF</color>
+    <color name="compRed">#D00E59</color>
+    <color name="errorRed">#D50000</color>
+    <color name="compYellow" tools:ignore="UnusedResources">#D2D800</color>
+    <color name="darkGreyColor">#666666</color>
+    <color name="primaryBlack">#2C2A29</color>
+    <color name="primaryYellow">#F2A900</color>
+
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="white">#ffffff</color>
+    <color name="backgroundGrey">#FFF5F5F5</color>
+    <color name="confirmed_green" tools:ignore="UnusedResources">#5ad321</color>
+    <color name="lightGrey">#f0f0f0</color>
+    <color name="lightBlue">#D0E0F2</color>
+
+    <!-- Map Colors-->
+    <color name="territoryFillColor">#1AF2A900</color>
+    <color name="territoryBoundaryColor">#FFF2A900</color>
+    <color name="activeOutageFillColor">#66F2A900</color>
+    <color name="activeOutageBoundaryColor">#FFF2A900</color>
+    <color name="impactingOutageFillColor">#66C30F59</color>
+    <color name="impactingOutageBoundaryColor">#FFC30F59</color>
+    <color name="plannedOutageFillColor">#660083AC</color>
+    <color name="plannedOutageBoundaryColor">#FF0083AC</color>
+
+    <!-- Icon Colors -->
+    <color name="iconTintGrey">#3e3e3e</color>
+    <color name="iconBackgroundTintBlue">#2F75C5</color>
+    <color name="iconTintInactive">#b3b3b3</color>
+</resources>

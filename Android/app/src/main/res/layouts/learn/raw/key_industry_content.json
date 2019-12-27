@@ -1,0 +1,74 @@
+{
+  "KeyIndustryPlayerCollections": [
+    {
+      "BodyTitle": "Alberta Energy (Government of Alberta)",
+      "BodySubTitle": "Oversees and Develops Policy.",
+      "Header": "Alberta Energy",
+      "Image": "albertaenergy",
+      "Content": "• Is ultimately responsible for sustaining the interests of Albertans through the stewardship and responsible development of energy and mineral resource systems\n\n• Manages and develops policy for the development of province's resources\n• Grants industry the right to explore for and develop energy and mineral resources\n\n• Establishes, administers and monitors the effectiveness of fiscal and royalty systems\n\n• Oversees a reliable and affordable electricity system for Albertans\n\n• Encourages additional investment that creates jobs and economic prosperity"
+    },
+    {
+      "BodyTitle": "Alberta’s Market Surveillance Administrator (MSA)",
+      "BodySubTitle": "Appointed by the Minister of Energy and acts as a watchdog for fairness and efficiency.",
+      "Header": "MSA",
+      "Image": "MSA",
+      "Content": "The MSA monitors the performance of Alberta’s electricity and natural gas markets – ensuring that they operate in a fair, efficient and openly competitive manner.\n\nThe MSA has the mandate to carry out surveillance and investigation in respect of the supply, generation, transmission, distribution, trade, exchange, purchase or sale of electricity, electric energy, electricity services or ancillary services, or any aspect of these activities, as well as retail natural gas."
+    },
+    {
+      "BodyTitle": "Balancing Pool",
+      "BodySubTitle": "Oversees the remaining Power Purchase Arrangements (any unsold generation assets) post deregulation.",
+      "Header": "Balancing Pool",
+      "Image": "balancingpool",
+      "Content": "The Balancing Pool’s mandate is:\n\n• Managing the financial accounts arising from the transition to a competitive generation market on behalf of electricity consumers; and\n\n• Meeting obligations and responsibilities relating to Power Purchase Arrangements (PPAs) as defined in Section 1(1)(nn) of the Electric Utilities Act."
+    },
+    {
+      "BodyTitle": "AESO",
+      "BodySubTitle": "Operates supply and demand of the energy grid.",
+      "Header": "AESO",
+      "Image": "AESO",
+      "Content": "A not-for-profit corporate entity created under the Electric Utilities Act that is responsible for operating Alberta's energy grid, matching supply to demand throughout the province.\n\nIt operates Alberta’s wholesale electricity market and plans and develops the provincial transmission system (including ties with neighbouring provinces and states and connecting new sources of generation supply). It acts in Albertans’ public interest, has no financial interest/investment in the Alberta electricity industry, and is regulated by the AUC."
+    },
+    {
+      "BodyTitle": "Generation Companies",
+      "BodySubTitle": "Produce electrical power.",
+      "Header": "Generation Companies",
+      "Image": "generators",
+      "Content": "Thermal sources account for the majority of Alberta’s installed generating capacity. Coal-fired plants make up almost 50 per cent of the province’s total generating capacity and natural gas accounts for about 40 per cent. This includes cogeneration at industrial operations that produce electricity as a by-product of their normal activities. The remaining generation sources are hydro, wind and biomass (energy produced from organic sources such as wood waste, garbage or animal matter)."
+    },
+    {
+      "BodyTitle": "Transmission Facility Owners (TFOs)",
+      "BodySubTitle": "Own, operate, build, and maintain the high-voltage power lines that run from the Generators.",
+      "Header": "TFOs",
+      "Image": "transmissionowners",
+      "Content": "There are four major TFOs in Alberta: ATCO Electric, AltaLink, EPCOR Energy Inc. (owned by the City of Edmonton) and ENMAX Power Corp. (owned by the City of Calgary). When new or upgraded facilities are needed within Alberta and the AESO’s NID is approved, a TFO’s facilities application will be considered by the Alberta Utilities Commission."
+    },
+    {
+      "BodyTitle": "The Alberta Utilities Commission (AUC)",
+      "BodySubTitle": "Regulates and governs investor-owned electric and natural gas utilities.",
+      "Header": "AUC",
+      "Image": "AUC",
+      "Content": "It is the governing body for both the approval and siting of transmission projects in Alberta. The AUC is responsible for approving all costs of operating the electricity system and construction of transmission in the province. As a provincial regulator, it operates independently of government."
+    },
+    {
+      "BodyTitle": "Distribution Facility Owners (DFOs)",
+      "BodySubTitle": "Own and operate low voltage (</= 25kV) running to residential, commercial and industrial customers.",
+      "Header": "DFOs",
+      "Image": "distributionowners",
+      "Content": "These distribution lines provide service to most consumers, except for the very largest industries who may purchase power directly from generators.\n\nATCO Electric: DFO across north and east central Alberta, mostly rural customers- over 220, 000 customers\n\nENMAX: DFO in Calgary and surrounding area—over 660,000 customers\n\nEPCOR: DFO in Edmonton- over 360,000 customers\n\nFortisAlberta Inc: DFO in central and southern Alberta- over 550, 000 customers\n\nMunicipal DFOs: some municipalities, such as Red Deer, Lethbridge, and Medicine Hat are the DFO in their municipality."
+    },
+    {
+      "BodyTitle": "Utilities Consumer Advocate (UCA)",
+      "BodySubTitle": "Ensures that Alberta consumers have the information, representation, and protection they need in Alberta’s electricity and natural gas markets.",
+      "Header": "UCA",
+      "Image": "UCA",
+      "Content": "It educates Alberta energy consumers about their energy options, offers mediation services (in the event of disputes over utility bills), and represents consumers’ interests in policy discussions regarding energy and in regulatory hearings with the AUC."
+    },
+    {
+      "BodyTitle": "Electricity Retailers",
+      "BodySubTitle": "Provide your power bills.",
+      "Header": "Electricity Retailers",
+      "Image": "retailers",
+      "Content": "Responsible for buying electricity supply and selling it to customers (homes or businesses). The retailer also manages their customer’s account and sends out customer bills."
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/primaryBlue</item>
+        <item name="colorPrimaryDark">@color/primaryBlue</item>
+        <item name="colorAccent">@color/primaryYellow</item>
+        <item name="android:statusBarColor">@color/primaryBlue</item>
+        <item name="textAppearanceBody1">@style/AppTheme.TextAppearanceBody</item>
+    </style>
+
+    <style name="AppTheme.Splash" parent="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.TextAppearanceBody" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/atco_bodyopen_sans</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="AppTheme.MyBillText" parent="AppTheme.TextAppearanceBody" >
+        <item name="fontFamily">@font/uniform_condensed_medium</item>
+        <item name="android:textColor">@color/compGrey</item>
+    </style>
+
+    <style name="AppTheme.MyBillTitle" parent="AppTheme.MyBillText">
+        <item name="fontFamily">@font/uniform_condensed_bold</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="AppTheme.MyBillTitle.Link" parent="AppTheme.MyBillTitle">
+        <item name="android:textColor">@color/primaryBlue</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.LargeTitle" parent="@style/TextAppearance.AppCompat.Title">
+        <item name="android:textSize">36sp</item>
+        <item name="android:fontFamily">@font/uniform_condensed_bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <!-- Widget Styles -->
+
+    <style name="AppTheme.Input" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textSize">15sp</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="hintEnabled">false</item>
+        <item name="helperTextEnabled">true</item>
+        <item name="errorEnabled">true</item>
+        <item name="endIconMode">clear_text</item>
+    </style>
+
+    <style name="AppTheme.InputDropdown" parent="AppTheme.Input">
+        <item name="endIconMode">dropdown_menu</item>
+    </style>
+
+    <style name="AppTheme.InputTitle" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textColor">@color/primaryBlack</item>
+        <item name="fontFamily">@font/uniform_condensed_medium</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginStart">0dp</item>
+    </style>
+
+    <style name="AppTheme.BlueSquareCheckbox" parent="@style/Widget.MaterialComponents.CompoundButton.CheckBox">
+        <item name="android:buttonTint">@color/checkbox_colors</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="AppTheme.Switches" parent="AppTheme">
+        <item name="colorControlActivated">@color/primaryBlue</item>
+        <item name="android:textColor">@color/primaryBlue</item>
+        <item name="colorAccent">@color/primaryBlue</item>
+    </style>
+
+    <style name="AppTheme.BottomBlueButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/button_colors</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/uniform_condensed_bold</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_marginStart">50dp</item>
+        <item name="android:layout_marginEnd">50dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+
+    <!-- Dialog Styles -->
+
+    <style name="AppTheme.Dialog" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/primaryBlue</item>
+        <item name="android:textColor">@color/primaryBlack</item>
+    </style>
+
+    <style name="AppTheme.ErrorDialog" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/errorRed</item>
+        <item name="android:textColor">@color/primaryBlack</item>
+    </style>
+
+
+    <!-- Animation Styles -->
+
+</resources>

@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+    <!-- MARK: Android Config Strings -->
+<!--    <string name="app_name">My Electricity</string>-->
+    <string name="preference_file_key">USER_PREFERENCES</string>
+    <string name="notification_channel">Outage Notification</string>
+    <string name="notification_channel_name">Outage</string>
+
+    <!-- MARK: Common Used -->
+    <string name="welcome">Welcome!</string>
+    <string name="verification">Verification</string>
+    <string name="site_id">Site ID</string>
+    <string name="site_name">Site Name</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="status">Status</string>
+    <string name="text_message">Text Message</string>
+    <string name="about">About</string>
+    <string name="edit">Edit</string>
+    <string name="email">Email</string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
+    <string name="ok">OK</string>
+    <string name="delete">Delete</string>
+    <string name="error">Error</string>
+    <string name="done">Done</string>
+    <string name="or">Or</string>
+    <string name="and_or">and/or</string>
+    <string name="exit_app_prompt">Quit App?</string>
+    <string name="exit_app_prompt_details">Are you sure you want to quit the ATCO My Electricity App?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="your_site_id">Your Site ID</string>
+    <string name="two_dash">--</string>
+    <string name="notifications">Notifications</string>
+    <string name="push_notifications">App Push Notifications</string>
+    <string name="search">Search</string>
+    <string name="search_address">Search Address</string>
+    <string name="address">Address</string>
+    <string name="all_done">All Done</string>
+    <string name="cancel">Cancel</string>
+    <string name="select">Select</string>
+    <string name="save">Save</string>
+    <string name="not_selected">Not Selected</string>
+    <string name="_continue">Continue</string>
+    <string name="notification">Notification</string>
+    <string name="thank_you">Thank You!</string>
+    <string name="offline">Offline</string>
+    <string name="offline_label">This device is offline</string>
+    <string name="offline_dialog_message">This device is offline. Using cached data where available. Please reconnect to update outage information.</string>
+    <string name="refreshing">Refreshing</string>
+    <string name="register_login">Register / Login</string>
+    <string name="submitting">Submitting…</string>
+    <string name="loading">Loading…</string>
+    <string name="searching">Searching…</string>
+
+    <!-- MARK: Tab Titles-->
+    <string name="nav_location">Locations</string>
+    <string name="nav_reports">Reports</string>
+    <string name="nav_learn">Learn</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- MARK: Error messages -->
+    <string name="network_error">Sorry, we\'re experiencing network failure. Please try again later.</string>
+    <string name="not_authenticated_must_sign_in">Not Authenticated - Must be signed in</string>
+    <string name="error_cannot_authenticate">Sorry. We\'re experiencing difficulty while signing you in, please try again later!</string>
+
+    <string name="locations_error_territory">This location is not in ATCO service territory</string>
+    <string name="locations_error_edit_site_save">Please enter a site ID or select an address to save your changes!</string>
+    <string name="locations_error_save_location">Could not update Saved Location! Please try again</string>
+    <string name="locations_error_delete_location">Could not remove Saved Location! Please try again</string>
+    <string name="locations_error_address_or_site_id_required">Please enter a site ID or select an address to continue!</string>
+    <string name="locations_error_address_required">Please enter an address or place a pin on the map to continue!</string>
+    <string name="locations_error_site_id_required">A site ID is required to continue!</string>
+    <string name="locations_error_site_name_required">Please enter a nickname for this location to continue!</string>
+    <string name="locations_error_site_name_unique">Duplicate Name. Please choose a name that is unique</string>
+    <string name="locations_error_convert_gps">Unable to convert GPS to physical address</string>
+    <string name="locations_error_place_search">Sorry. We can\'t find the information for the location searched. Please try a different location</string>
+
+    <string name="reports_error_submit">Something went wrong while submitting your report. Please try again!</string>
+    <string name="reports_error_not_verified">A Power Outage report can only be submitted for a verified site. Please select a verified site to continue</string>
+    <string name="reports_error_not_logged_in">To report issues, you must be logged in…</string>
+
+    <string name="settings_error_email">Please enter a valid email address</string>
+    <string name="settings_error_password">Password is not valid</string>
+    <string name="settings_error_password_prompt">Password is not valid. Minimum requirement of at least 8 characters including at least 1 lowercase letter, 1 uppercase letter, and 1 number</string>
+    <string name="settings_error_signup_fields">Please fix all highlighted errors to continue!</string>
+    <string name="settings_error_email_query">Could not complete email validation. Please try again</string>
+    <string name="settings_error_login_query">Could not login with the provided credentials. Please try again</string>
+    <string name="settings_error_invalid_token">Invalid token returned! Please try again</string>
+    <string name="settings_error_required_fields">Please ensure all required fields are filled in before submitting</string>
+    <string name="settings_error_unlink_account">Could not unlink account. Please try again or contact us for assistance</string>
+    <string name="settings_error_fields_mismatch">Password Entries or Security Answer Entries do not match</string>
+    <string name="settings_error_match">%s must match</string>
+    <string name="settings_error_match_password">Password entries</string>
+    <string name="settings_error_match_security">Security Answer entries</string>
+
+    <!-- ******************* -->
+
+    <!-- MARK: Settings Tab -->
+
+    <!-- ******************* -->
+
+    <string name="settings">Settings</string>
+    <string name="settings_my_account">My ATCO Account</string>
+    <string name="settings_login">Login</string>
+    <string name="settings_edit_profile">Edit Profile</string>
+    <string name="settings_unlink_prompt">Unlink Account</string>
+    <string name="settings_unlink_prompt_details">Once your account is unlinked, you\'ll be logged out of the app, your saved locations will be deleted, and all outage notifications stopped. To proceed with unlinking your account, please enter your credentials.</string>
+    <string name="settings_unlink_success">User account successfully unlinked!</string>
+    <string name="settings_logout">Logout</string>
+    <string name="settings_logout_prompt">Log Out of the app?</string>
+    <string name="settings_logout_prompt_details">You won\'t be able to view saved locations, but any associated outage notifications will continue.</string>
+    <string name="settings_support">Support</string>
+    <string name="settings_app_tour">App Tour</string>
+    <string name="settings_call_atco_for_support">Call ATCO for App Support</string>
+    <string name="settings_app_version">App Version %s</string>
+    <string name="settings_terms_of_service">Terms of Service</string>
+    <string name="settings_agree_terms">I agree to the Terms of Service</string>
+    <string name="settings_third_party_libaries">Third-Party Libraries</string>
+
+    <!-- MARK: Email Entry -->
+    <string name="settings_what_email">What email address would you like to use?</string>
+    <string name="settings_new_email_prompt">Email address is not registered. Would you like to try a different address or continue with the new account registration process?</string>
+    <string name="settings_change_email">Change Email</string>
+    <string name="settings_enter_code">Enter Verification Code</string>
+    <string name="settings_enter_code_instruction">If you\'ve already received the email, tap the button below to enter the activation code manually</string>
+    <string name="settings_terms_agree_required">You must agree to the terms and conditions before continuing!</string>
+
+    <!-- MARK: Login -->
+    <string name="settings_login_title">Account Login</string>
+    <string name="settings_login_form_explanation">Complete this form to log into the app with your existing ATCO account</string>
+    <string name="settings_email_hint">Tap to enter your email address</string>
+    <string name="settings_password">Password</string>
+    <string name="settings_password_hint">Tap to enter your password</string>
+    <string name="settings_forgot_password">Forgot your password?</string>
+    <string name="settings_forgot_pass_message">Are you sure you\'d like to reset your account password? You\'ll need to confirm your email address before you can change your password</string>
+
+    <!-- MARK: Reset Password -->
+    <string name="settings_new_password">New Password</string>
+    <string name="settings_reset_password">Reset Password</string>
+    <string name="settings_reset_header">Happy to Help!</string>
+    <string name="settings_reset_subheader">To protect the security of your ATCO account, we have sent you an email to verify your identity.</string>
+    <string name="settings_reset_instruction_1">Check now for a \"Reset Password\" email from ATCO Accounts.</string>
+    <string name="settings_reset_instruction_2">When you find it, tap the \"Reset Password\" button to reset and create a new password.</string>
+    <string name="settings_reset_password_title">Enter the verification code sent to your registered email address and a new password to immediately replace your current password</string>
+    <string name="settings_reset_code_helper">Pass code is provided in password reset email</string>
+    <string name="settings_new_password_button">Set New Password</string>
+
+    <!-- Registration -->
+    <string name="settings_register_button">Register Now</string>
+    <string name="settings_register_title">Account Registration</string>
+    <string name="settings_register_form_explanation">Complete the following form to finish setting up your ATCO account</string>
+    <string name="settings_register_account_info">Account Info</string>
+    <string name="settings_register_personal_info">Personal Info</string>
+    <string name="settings_signup_account_security">Account Security</string>
+    <string name="settings_password_requirements">Minimum of 8 characters including at least 1 lowercase letter, 1 uppercase letter, and 1 number</string>
+    <string name="settings_confirm_password">Confirm Password</string>
+    <string name="settings_confirm_password_hint">Tap to confirm your password</string>
+    <string name="settings_confirm_password_helper">Password entries must match</string>
+    <string name="settings_pass_code">Pass Code</string>
+    <string name="settings_pass_code_hint">Tap to enter your pass code</string>
+    <string name="settings_pass_code_helper">Pass code is provided in account activation email</string>
+    <string name="settings_phone_helper">Used for notifications via text message</string>
+    <string name="settings_first_name">First Name</string>
+    <string name="settings_first_name_hint">Tap to enter your first name</string>
+    <string name="settings_last_name">Last Name</string>
+    <string name="settings_last_name_hint">Tap to enter your last name</string>
+    <string name="settings_phone_optional">Mobile Phone (optional)</string>
+    <string name="settings_phone_hint">Tap to enter your 10 digit phone number</string>
+    <string name="settings_signup_security_explanation">Your answer to a security question, known only to you will help ensure that only you can change the password to your ATCO account</string>
+    <string name="settings_security_question">Security Question</string>
+    <string name="settings_security_hint">Please select a security question</string>
+    <string name="settings_security_answer">Answer</string>
+    <string name="settings_security_answer_hint">Tap to enter your answer</string>
+    <string name="settings_security_confirm">Confirm Answer</string>
+    <string name="settings_security_confirm_hint">Tap to confirm your answer</string>
+    <string name="settings_security_confirm_helper">Answer entries must match</string>
+    <string name="settings_required">Entry Required</string>
+    <string name="settings_minimum_length">Entry must be at least %d characters long</string>
+
+
+    <!-- Expired Code -->
+    <string name="settings_expired_header">Oops.</string>
+    <string name="settings_resend_email">Resend Verification Email</string>
+    <string name="settings_email_expired">Verification Expired</string>
+    <string name="settings_expired_email_explanation">The verification code previously sent to you has expired, so you\'ll need a new one</string>
+
+    <!-- MARK: Email Verification -->
+    <string name="settings_email_verification_title">Email Verification</string>
+    <string name="settings_send_verification_email">Send Verification Email</string>
+    <string name="settings_verification_subheader">We need to verify the email address you provided before we can create your new ATCO account.</string>
+    <string name="settings_verification_instruction_1">Check now for a verification email from ATCO Accounts.</string>
+    <string name="settings_verification_instruction_2">When you find the email, tap the \"ACTIVATE ACCOUNT\" button to continue.</string>
+
+    <!-- MARK: Edit Account -->
+    <string name="settings_edit_account_title">Edit Account Profile</string>
+    <string name="settings_edit_account_header">Tap on an editable item to update</string>
+    <string name="settings_edit_account_email_helper">Used for account login and notifications via email.</string>
+    <string name="settings_edit_account_success">Account Profile successfully updated!</string>
+    <string name="settings_edit_account_save_button">Save Changes</string>
+
+    <!-- MARK: Settings -->
+<!--    <string name="profile_update_email_description">Used for account login and notifications via email.</string>-->
+<!--    <string name="last_name_capital">LAST NAME</string>-->
+<!--    <string name="unlink_account">Unlink Account</string>-->
+<!--    <string name="tap_to_update">Tap on an editable item to update.</string>-->
+<!--    <string name="required_info_can_not_empty">Required field - please enter your information.</string>-->
+<!--    <string name="Help">Help</string>-->
+<!--    <string name="feedback_segement_feature">Feature</string>-->
+<!--    <string name="feedback_segment_general">General</string>-->
+<!--    <string name="feedback_segment_bug">Bug</string>-->
+<!--    <string name="alamofire">Alamofire</string>-->
+<!--    <string name="app_version_1">App Version 1.0</string>-->
+<!--    <string name="submit">Submit</string>-->
+<!--    <string name="details">Details</string>-->
+<!--    <string name="brief_description">Brief description</string>-->
+<!--    <string name="feedback">Feedback</string>-->
+<!--    <string name="how_can_we_help">How Can We Help?</string>-->
+<!--    <string name="my_atco_account">My ATCO Account</string>-->
+<!--    <string name="settings_capital">SETTINGS</string>-->
+<!--    <string name="email_example">email@email.com</string>-->
+<!--    <string name="act_title">Act Title</string>-->
+<!--    <string name="account_profile">Account Profile</string>-->
+<!--    <string name="first_name">First Name</string>-->
+<!--    <string name="first_name_capital">FIRST NAME</string>-->
+<!--    <string name="to_save_changes_you_need_description">To save changes, please correct the errors listed above.</string>-->
+<!--    <string name="subject">Subject</string>-->
+<!--    <string name="enter_your_email_address">Enter your email address…</string>-->
+<!--    <string name="last_name">Last Name</string>-->
+<!--    <string name="not_signed_in">Not signed in.</string>-->
+<!--    <string name="loading_profile">Loading Profile</string>-->
+<!--    <string name="error_loading_profile">Error loading profile at this time</string>-->
+<!--    <string name="confirm_number_typed">Confirm number typed</string>-->
+<!--    <string name="changes_saved_description">The changes to your account profile have been saved.</string>-->
+<!--    <string name="to_save_changes_description">To save changes, you\'ll need to correct the errors noted above.</string>-->
+<!--    <string name="save_your_changes_prompt">Save your changes?</string>-->
+<!--    <string name="you_have_made_changes_profile">You\'ve made some changes to your account profile.</string>-->
+<!--    <string name="complete_request">Completing Request</string>-->
+<!--    <string name="please_standby">Please standby. This shouldn\'t take long</string>-->
+<!--    <string name="login_register_for_an_account_capital">LOG IN / REGISTER FOR AN ACCOUNT</string>-->
+<!--    <string name="to_finish_account_description">To finish account registration, check for an email from ATCO Accounts.</string>-->
+<!--    <string name="change_email_address">Change Email Address</string>-->
+<!--    <string name="verification_code_capital">Verification Code</string>-->
+<!--    <string name="confirm_answer_required">Confirm Answer *</string>-->
+<!--    <string name="mobile_phone_capital">Mobile Phone</string>-->
+<!--    <string name="enter_a_custom_question">Enter a custom question</string>-->
+<!--    <string name="forgot_your_password">Forgot your password?</string>-->
+<!--    <string name="please_review">Please Review</string>-->
+<!--    <string name="email_verification_capital">Email Verification</string>-->
+<!--    <string name="enter_last_name">Enter last name</string>-->
+<!--    <string name="pass_code_provided_in_activation_email">Verification code has been sent to your email.</string>-->
+<!--    <string name="security_question_description">Your answer will ensure that only you can change your ATCO account password.</string>-->
+<!--    <string name="this_helps_ensure_save_answer">This ensures we save the correct answer.</string>-->
+<!--    <string name="not_able_to_log_with_password_provided">Incorrect password, please try again.</string>-->
+<!--    <string name="security_question_capital">Security Question</string>-->
+<!--    <string name="mobile_phone_placeholder">10 digit number</string>-->
+<!--    <string name="login_page_header">Complete this form to login with your existing ATCO account.</string>-->
+<!--    <string name="answer_with_star">Answer *</string>-->
+<!--    <string name="first_name_with_star">First Name *</string>-->
+<!--    <string name="used_for_notification_via_text">Used for notification via text message.</string>-->
+<!--    <string name="password_with_star">Password *</string>-->
+<!--    <string name="tap_to_enter_email">Tap to enter email address</string>-->
+<!--    <string name="account_security_capital">Account Security</string>-->
+<!--    <string name="enter_first_name">Enter first name</string>-->
+<!--    <string name="confirm_password_with_star">Confirm Password *</string>-->
+<!--    <string name="what_email_to_use">What email address would you like to use?</string>-->
+<!--    <string name="enter_answer_to_question">Enter answer to question</string>-->
+<!--    <string name="personal_info">Personal Info</string>-->
+<!--    <string name="password">Password</string>-->
+<!--    <string name="repeat_answer_to_question">Repeat answer to question</string>-->
+<!--    <string name="select_a_question">Select a question</string>-->
+<!--    <string name="required_information_with_star">* Required Information</string>-->
+<!--    <string name="complete_following_form_setting">Complete the following form to finish setting up your ATCO account.</string>-->
+<!--    <string name="last_name_with_star">Last Name *</string>-->
+<!--    <string name="account_info_capital">Account Info</string>-->
+<!--    <string name="it_is_on_way">It\'s on its way.</string>-->
+<!--    <string name="we_sent_new_email_description">We\'ve sent you a new email to verify your email address.</string>-->
+<!--    <string name="must_agree_terms_of_service">You must agree to the Terms of Service to continue.</string>-->
+<!--    <string name="create_own_security_question">Create your own security question</string>-->
+<!--    <string name="security_question_cannot_blank">Security question cannot be blank.</string>-->
+<!--    <string name="security_question">Security Question</string>-->
+<!--    <string name="form_input_error">Form Input Error</string>-->
+<!--    <string name="passcode_cannot_blank">Email verification Code cannot be blank.</string>-->
+<!--    <string name="password_cannot_blank">Password cannot be blank.</string>-->
+<!--    <string name="confirm_password_cannot_blank">Confirm password cannot be blank.</string>-->
+<!--    <string name="first_name_cannot_blank">First name cannot be blank.</string>-->
+<!--    <string name="last_name_cannot_blank">Last name cannot be blank.</string>-->
+<!--    <string name="phone_number_incomplete">Phone number is incomplete.</string>-->
+<!--    <string name="please_select_security_question">Please select a security question.</string>-->
+<!--    <string name="security_answer_cannot_blank">Security answer cannot be blank.</string>-->
+<!--    <string name="confirm_security_cannot_blank">Confirm security answer cannot be blank.</string>-->
+<!--    <string name="security_answers_not_match">Security answers do not match.</string>-->
+<!--    <string name="missing_email">Email address cannot be blank</string>-->
+<!--    <string name="please_provide_email_to_continue">Please provide an email address to continue.</string>-->
+<!--    <string name="account_login_capital">Account Login</string>-->
+<!--    <string name="invalid_email">Invalid Email</string>-->
+<!--    <string name="please_enter_valid_email">Please enter a valid email address</string>-->
+<!--    <string name="re_enter_password">Re-enter password</string>-->
+<!--    <string name="new_password">New Password</string>-->
+<!--    <string name="enter_pass_code">Enter Verification Code</string>-->
+<!--    <string name="enter_pass_word">Enter Password</string>-->
+<!--    <string name="password_requirement">Minimum of 8 characters including 1 lowercase letter, uppercase letter, and 1 number.</string>-->
+<!--    <string name="confirm_password">Confirm Password</string>-->
+<!--    <string name="pass_code_provided_in_reset_email">Verification code provided in password reset email.</string>-->
+<!--    <string name="enter_password_description">Enter and re-enter a new password for your ATCO account. This will replace your current password.</string>-->
+<!--    <string name="back_to_the_app_capital">Back To The App</string>-->
+<!--    <string name="missing_password">Missing Password</string>-->
+<!--    <string name="please_enter_a_password">Please enter a password.</string>-->
+<!--    <string name="password_mismatch">Password Mismatch</string>-->
+<!--    <string name="password_mismatch_details">Passwords do not match. Please re-enter passwords.</string>-->
+<!--    <string name="missing_code">Missing Code</string>-->
+<!--    <string name="missing_code_details">Please fill in the verification code provided in the reset password email.</string>-->
+<!--    <string name="new_password_set_and_login">Your new password has been set. We\'ve also logged you in to the app.</string>-->
+
+
+    <!-- *************** -->
+
+    <!-- MARK: Locations Tab -->
+
+    <!-- *************** -->
+
+    <string name="locations_registration_cell_body">Report local service issues, and stay up-to-date with power outage alerts with current status.</string>
+    <string name="locations_site_id_label">Site ID:</string>
+    <string name="locations_address_label">Address:</string>
+    <string name="locations_no_more_saved_body">Save your favourite locations for quick access</string>
+    <string name="locations_unnamed">Unnamed Location</string>
+    <string name="locations_permission_title">Enable Location Permission</string>
+    <string name="locations_permission_prompt">Please enable access to your device location to help in adding sites to your saved locations and show outages in your vicinity.</string>
+
+    <!-- MARK: POI -->
+    <string name="locations_save_as_poi">Save as point-of-interest</string>
+    <string name="locations">Locations</string>
+    <string name="locations_remove_location_button">Remove Saved Location</string>
+    <string name="locations_login_before_save">To save this location or report an issue, please register or login with your ATCO account.</string>
+
+    <!-- MARK: Outage Information -->
+    <string name="locations_outage_start_time">Start Time</string>
+    <string name="locations_outage_repair_time">Estimated Repair Time</string>
+    <string name="locations_outage_cause">Cause</string>
+    <string name="locations_outage_status">Current Status</string>
+    <string name="locations_outage_customers_affected">Customers Affected</string>
+
+    <!-- MARK: Map Buttons Accessibility Descriptions -->
+    <string name="locations_button_location_desc">Zoom to my location</string>
+    <string name="locations_button_expand_desc">Zoom to show province</string>
+    <string name="locations_button_layers_desc">Show map legend and layers</string>
+    <string name="locations_button_refresh_desc">Refresh Outages</string>
+
+    <!-- MARK: Map Layers -->
+    <string name="locations_layers_title">Map Layers</string>
+    <string name="locations_layer_territory">ATCO Service Territory</string>
+    <string name="locations_layer_active">Active Power Outage</string>
+    <string name="locations_layer_impacting">Power Outage \n(Impacting Saved Location)</string>
+    <string name="locations_layer_scheduled">Active Scheduled Power Outage</string>
+    <string name="locations_layer_planned">Planned Power Outage</string>
+    <string name="locations_layer_saved">My Saved Locations</string>
+
+    <!-- MARK:  Create New Site -->
+    <string name="locations_notification_verified">Notifications are only available with a verified Site ID number</string>
+    <string name="locations_site_id_error_length">Site ID must be 13 digits</string>
+    <string name="locations_nickname_hint">For example, \"home\", \"work\", \"the cabin\" etc.</string>
+    <string name="locations_nickname_subheader">Set an identifier for this location throughout the app</string>
+    <string name="locations_save_site_success">Location successfully saved!</string>
+
+    <!-- MARK: Verification Statuses -->
+    <string name="locations_verification_status">Verification Status</string>
+    <string name="locations_status_explanation">Before you can receive outage notifications ATCO must verify your information. Once is completed we will send you an email confirming your status.</string>
+    <string name="locations_possible_verifications">Possible Verification Statuses</string>
+    <string name="locations_status_not_verified">Not Verified</string>
+    <string name="locations_status_not_verified_content">ATCO has not completed the verification process. This may take up to 24 hours to complete.</string>
+    <string name="locations_status_verified">Verified</string>
+    <string name="locations_status_verified_content">ATCO has confirmed your information. You are able to receive outage notifications.</string>
+    <string name="locations_status_mismatch">Mismatch</string>
+    <string name="locations_status_mismatch_content">The information you provided on sign up does not match what ATCO has on file. You will receive an email with further instructions.</string>
+    <string name="locations_status_not_found">Site ID Not Found</string>
+    <string name="locations_status_not_found_content">The Site ID entered does not match what ATCO has on file. Please confirm that the Site ID again. You will receive an email with further instructions.</string>
+    <string name="locations_status_not_registered">Not Registered</string>
+    <string name="locations_status_not_registered_content">The customer registered at this location does not match your registration information. Please contact ATCO for assistance.</string>
+
+<!--    <string name="tap_to_enter_your_site_id">Tap to enter your Site ID</string>-->
+<!--    <string name="input_your_account_details">Input your account number – the 13-digit number at the top of your electricity bill.</string>-->
+<!--    <string name="please_also_send_planned_outage_notification">Please also send planned outage notification</string>-->
+<!--    <string name="adding_site_id_description">Once you add a Site ID for this location, ATCO will verify your email address. Once this is finished, we will send you an email confirming you will begin receiving outage notifications.</string>-->
+<!--    <string name="enter_or_long_press">Enter an address OR tap on your location in the map for 3 seconds to drop a pin</string>-->
+<!--    <string name="site_nick_name_capital">SITE NICKNAME</string>-->
+<!--    <string name="please_provide_site_id_erro_message">Please provide a Site ID or address to continue.</string>-->
+<!--    <string name="duplicated_site_id_description">Duplicate Site ID. Please choose a Site ID that is unique</string>-->
+<!--    <string name="duplicate_name_error_message">Duplicate Name. Please choose a name that is unique</string>-->
+<!--    <string name="service_site_id_capital">SERVICE SITE ID</string>-->
+<!--    <string name="notification_explanation">Select your notification type preference, you may select more than one type.</string>-->
+<!--    <string name="location_capital">LOCATION</string>-->
+<!--    <string name="location">Location</string>-->
+<!--    <string name="tap_to_enter_a_nickname">Tap to enter a nickname</string>-->
+<!--    <string name="notification_only_available_valid_site_id">Notifications are only available when you enter a valid Site ID number</string>-->
+<!--    <string name="tap_to_enter_a_site_id">Tap to enter a Site ID</string>-->
+<!--    <string name="double_check_site_id_description">Please double check the number you provided for the Site ID. It must be a 13 digits number.</string>-->
+<!--    <string name="please_provide_nick_name">Please provide a nickname to continue.</string>-->
+
+    <!-- Add / Edit Locations -->
+    <string name="locations_add_site">Add Location</string>
+    <string name="locations_edit_site_title">Edit Saved Location</string>
+    <string name="locations_add_site_title">Add A Saved Location</string>
+    <string name="locations_delete_site">Remove Saved Location</string>
+    <string name="locations_delete_site_message">Are you sure you want to remove this saved location?</string>
+    <string name="locations_delete_site_success">Location successfully removed!</string>
+
+    <string name="locations_site_id_explanation">Please enter your 13 digit Site ID from your electricity bill or an address to begin. A Site ID is required to send you outage notifications or report outages</string>
+    <string name="locations_your_site_id">Your Site ID</string>
+    <string name="locations_your_site_id_required">Your Site ID (required)</string>
+
+    <string name="locations_site_id_hint">Tap to enter the Site ID</string>
+    <string name="locations_address_hint">Tap to enter the address</string>
+    <string name="locations_address_explanation">Enter an address or long press on the map to drop a pin</string>
+    <string name="locations_nickname_explanation">Set an identifier for this location throughout the app</string>
+    <string name="locations_nickname_title">Site Nickname (required)</string>
+
+    <string name="locations_no_site_id">No Site ID</string>
+    <string name="locations_notify_planned_outage">Please also send planned outage notifications</string>
+    <string name="locations_notification_explanation">Select your notification type preference, you may select more than one type.</string>
+    <string name="locations_site_done_title">All Done!</string>
+    <string name="locations_site_done_body">If you added a site ID for this location, we must verify it before you\'ll be able to report a power outage or start receiving outage related notifications. \n\n
+        Once verification is complete, you\'ll receive an email confirming your verification status along with further instructions if required.</string>
+
+    <!-- ***************** -->
+
+    <!-- MARK: Learn Tab -->
+
+    <!-- ***************** -->
+
+    <string name="learn_tab_title">Learn &amp; Explore</string>
+    <string name="learn_key_industry_players">Key Industry Players</string>
+
+    <string name="learn_my_bill">My Bill, Explained</string>
+    <string name="learn_my_bill_instruction">Tap on the blue text to reveal detailed explanations about your bill.</string>
+    <string name="learn_my_bill_electricity">Electricity Bill</string>
+    <string name="learn_my_bill_gas">Natural Gas Bill</string>
+    <string name="learn_my_bill_address">Service Address</string>
+    <string name="learn_my_bill_address_example">Street Address,\n City, Prov</string>
+    <string name="learn_my_bill_site_id_example">0017654321098</string>
+    <string name="learn_my_bill_meter_number">Meter Number</string>
+    <string name="learn_my_bill_meter_example">98765432</string>
+    <string name="learn_my_bill_last_read">Last Actual Read</string>
+    <string name="learn_my_bill_charges_elec">Electric Energy Charges</string>
+    <string name="learn_my_bill_retailer_name">(Energy Retailer Name)</string>
+    <string name="learn_my_bill_kwh">XX.XX kWh X $0.XXkWh</string>
+    <string name="learn_my_bill_admin_fee">Administration Fee</string>
+    <string name="learn_my_bill_total_charges_electric">Total Electric Energy Charges</string>
+    <string name="learn_my_bill_delivery_charges">Delivery Charges</string>
+    <string name="learn_my_bill_atco_distro_elec">(ATCO Electric Distribution)</string>
+    <string name="learn_my_bill_date_example">April 10</string>
+    <string name="learn_my_bill_dates_example">May 11 - June 10</string>
+    <string name="learn_my_bill_dollars_example">$XX.XX</string>
+    <string name="learn_my_bill_distro_charge">Distribution Charge</string>
+    <string name="learn_my_bill_trans_charge">Transmission Charge</string>
+    <string name="learn_my_bill_rate_rider">Rate Rider</string>
+    <string name="learn_my_bill_access_fee">Local Access Fee</string>
+    <string name="learn_my_bill_total_delivery_charges">Total Delivery Charges</string>
+    <string name="learn_my_bill_gst">GST 5%</string>
+    <string name="learn_my_bill_summary_total">Summary Total</string>
+    <string name="learn_my_bill_january">January</string>
+    <string name="learn_my_bill_august">August</string>
+    <string name="learn_my_bill_charges_gas">Gas Energy Charges</string>
+    <string name="learn_my_bill_total_charges_gas">Total Gas Energy Charges</string>
+    <string name="learn_my_bill_atco_distro_gas">(ATCO Gas Distribution)</string>
+    <string name="learn_my_bill_fixed_charge">Fixed Delivery Charge</string>
+    <string name="learn_my_bill_variable_charge">Variable Delivery Charge</string>
+    <string name="learn_my_bill_franchise_fee">Municiple Franchise Fee</string>
+
+
+    <!-- ***************** -->
+
+    <!-- MARK: Reports Tab -->
+
+    <!-- ***************** -->
+
+    <string name="reports_main_subtitle">Reports help us improve service, monitor issues, and provide better quality service.</string>
+    <string name="reports_main_item_1">Report power outages\nin your area</string>
+    <string name="reports_main_item_2">Alert us to general\nissues you see</string>
+    <string name="reports_main_item_3">Street light problems?\nLet us know</string>
+
+    <string name="reports_power_outage">Power Outage</string>
+    <string name="reports_power_outage_title">Report A Power Outage</string>
+    <string name="reports_power_outage_subtitle">The power is out at my location</string>
+
+    <string name="reports_general_issue">General Issue</string>
+    <string name="reports_general_issue_title">Report A Street Light Issue</string>
+    <string name="reports_general_issue_subtitle">I see a loose power pole</string>
+
+    <string name="reports_streetlight_issue">Street Light Issue</string>
+    <string name="reports_streetlight_title">Report A Street Light Issue</string>
+    <string name="reports_streetlight_issue_subtitle">Damage to a street light pole</string>
+
+    <!-- MARK:  Report Outage -->
+    <string name="reports_select_location">Please select your location</string>
+
+    <!-- MARK: Report Issue or Streetlight Location -->
+    <string name="reports_location_header">Use your current location or search for a new location below</string>
+    <string name="reports_location_map_instruction">Enter an address OR press for 3 seconds on the map to drop a pin in the vicinity of the issue you wish to report</string>
+
+    <!-- MARK:  Report Details and Submit -->
+    <string name="reports_details_issue">Details of Issue</string>
+    <string name="reports_problem_type_title">Problem Type (required)</string>
+    <string name="reports_problem_type_hint">Please select a problem type</string>
+    <string name="reports_asset_id_optional">Asset ID (Optional)</string>
+    <string name="reports_power_off_now">IS YOUR POWER OFF NOW?</string>
+    <string name="reports_asset_id_hint">Tap to enter an asset ID</string>
+    <string name="reports_reset_breaker">Have you reset your breakers at both your meter pole in your yard and inside your house?</string>
+    <string name="reports_submit">Send Report</string>
+    <string name="reports_comments_title">Comments (required)</string>
+    <string name="reports_comments_hint">Please add any additional pertinent information</string>
+
+    <!-- MARK: Report Success -->
+    <string name="reports_success_message">ATCO appreciates your willingness to report this issue. We\'ll work to resolve it as soon as possible</string>
+
+<!--    <string name="must_sign_in_before_use">Please sign in to get access to this feature.</string>-->
+<!--    <string name="use_your_current_location_or_search">Use your current location or search for a new location below</string>-->
+<!--    <string name="report_street_light_capital">REPORT A STREET LIGHT ISSUE</string>-->
+<!--    <string name="enter_or_long_press_description">Enter an address OR press for 3 seconds on the map to drop a pin in the vicinity of the issue you wish to report</string>-->
+<!--    <string name="atco_appreciate_description">Thank you for reporting this issue. We will work to resolve it as soon as possible</string>-->
+<!--    <string name="report_success">REPORT SUCCESS</string>-->
+<!--    <string name="report">Report</string>-->
+<!--    <string name="please_select_your_location">Please select your location</string>-->
+<!--    <string name="report_outage_capital">REPORT OUTAGE</string>-->
+<!--    <string name="report_outage">Report Outage</string>-->
+<!--    <string name="add_site_id_capital">ADD SITE ID</string>-->
+<!--    <string name="issue_type_required">ISSUE TYPE (Required)</string>-->
+<!--    <string name="sending_details_to_atco">Sending details to ATCO</string>-->
+<!--    <string name="asset_id_located_description">May be located on a metal plate at base of pole</string>-->
+<!--    <string name="reset_breakers_question">HAVE YOU RESET YOUR BREAKERS AT BOTH YOUR METER POLE IN YOUR YARD AND INSIDE YOUR HOUSE?</string>-->
+<!--    <string name="comments_required">COMMENTS (Required)</string>-->
+<!--    <string name="general_issue_capital">GENERAL ISSUE</string>-->
+<!--    <string name="street_issue_capital">STREET LIGHT ISSUE</string>-->
+<!--    <string name="see_loose_power_pole">I see a loose power pole</string>-->
+<!--    <string name="damage_to_street_light">Damage to Street Light Pole</string>-->
+<!--    <string name="off_line_message">We\'re sorry. This feature is not accessible when your phone is offline</string>-->
+<!--    <string name="need_verified_id_before_report_description">In order to report an outage, please verify the Site ID</string>-->
+<!--    <string name="can_only_report_with_verified_site_id_description">Outages can only be reported when the Site ID status shows as Verified</string>-->
+<!--    <string name="please_select_issue">Please select the issue that most applies</string>-->
+<!--    <string name="please_provide_a_comment">Please provide a comment.</string>-->
+<!--    <string name="please_select_problem_type">Please select problem type.</string>-->
+<!--    <string name="not_signed_in_error_for_report">Please sign in to report an issue…</string>-->
+<!--    <string name="please_select_problem_for_streetlight_error">Please select the problem affecting the Streetlight</string>-->
+<!--    <string name="report_a_streetlight_issue_capital">REPORT A STREET LIGHT ISSUE</string>-->
+<!--    <string name="report_a_general_issue_capital">REPORT A GENERAL ISSUE</string>-->
+<!--    <string name="report_a_general_issue">Report A General Issue</string>-->
+<!--    <string name="report_a_power_outage_capital">REPORT A POWER OUTAGE</string>-->
+<!--    <string name="report_a_power_outage">Report A Power Outage</string>-->
+<!--    <string name="please_provide_comment">Please provide a comment</string>-->
+<!--    <string name="please_provide_address_error">Please provide an address to continue.</string>-->
+<!--    <string name="please_connect_network_error">Please connect a network to continue.</string>-->
+
+    <!-- MARK:  Onboarding -->
+
+    <string name="onboarding_exit_button">EXIT TOUR</string>
+    <string name="onboarding_item_title0">OUTAGE MAP</string>
+    <string name="onboarding_item_content0">The outage map displays active electric outages throughout ATCO service areas. Tap a marker to zoom to the outage area.</string>
+    <string name="onboarding_item_title1">OUTAGE DETAILS</string>
+    <string name="onboarding_item_content1">Tap on the outage marker to view the estimated repair time and current status for the outage.</string>
+    <string name="onboarding_item_title2">REPORT SERVICE ISSUES</string>
+    <string name="onboarding_item_content2">Press for 3 seconds on the map to drop a pin on a specific location, or by using the search. \n\nThen select an option to report a service outage, street light issue, or general problem. \nOr save as a point-of-interest.</string>
+    <string name="onboarding_item_title3">OUTAGE NOTIFICATIONS</string>
+    <string name="onboarding_item_content3">Get notified of active outages that impact locations you care about via email, text message, and/or notifications.\n\nStay informed of new outages, current stations and estimated resolution.</string>
+</resources>

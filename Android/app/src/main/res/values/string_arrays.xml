@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="reports_problem_types_general">
+        <item>Complaint</item>
+        <item>Compliment</item>
+        <item>Contact me</item>
+        <item>Injury</item>
+        <item>New Service</item>
+        <item>Other</item>
+        <item>Safety</item>
+        <item>Vegetation</item>
+    </string-array>
+
+    <string-array name="reports_problem_types_streetlight">
+        <item>Damage</item>
+        <item>Light Malfunctioning</item>
+        <item>Multiple Lights Issue</item>
+        <item>Other</item>
+        <item>Vandalism</item>
+    </string-array>
+
+    <string-array name="settings_signup_security_questions">
+        <item>What was the house number and street name you lived in as a child?</item>
+        <item>What were the last four digits of your childhood telephone number?</item>
+        <item>What primary school did you attend?</item>
+        <item>In what town or city was your first full time job?</item>
+        <item>What is the middle name of your oldest child?</item>
+        <item>In what city were you born?</item>
+        <item>What high school did you attend?</item>
+        <item>What was the make of your first car?</item>
+        <item>What is your mother\'s maiden name?</item>
+    </string-array>
+</resources>

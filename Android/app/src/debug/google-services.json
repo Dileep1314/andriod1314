@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "966798645759",
+    "firebase_url": "https://dev-outage-notification.firebaseio.com",
+    "project_id": "dev-outage-notification",
+    "storage_bucket": "dev-outage-notification.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:966798645759:android:c287e60d91fd58c8",
+        "android_client_info": {
+          "package_name": "outage.atco.outageandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "966798645759-dcbjp2tlqvqchn0pi52l6jmo0jugoaec.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "outage.atco.outageandroid",
+            "certificate_hash": "cec1629c6320ea1058f475d51a2a7aa84e09f7b7"
+          }
+        },
+        {
+          "client_id": "966798645759-3of26b1rlm8gp8rp83edg0b2ut1lqhng.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD69BVCsCtCRi-Et1PfYFliaqasa3LVe7Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "966798645759-3of26b1rlm8gp8rp83edg0b2ut1lqhng.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "966798645759-iif7mkfqilrgl5ddnrqhjahalhjfh4df.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ATCO.CustomerOutageNotificationDev",
+                "app_store_id": "12345"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

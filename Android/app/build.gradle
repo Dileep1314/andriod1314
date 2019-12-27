@@ -1,0 +1,218 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'io.fabric'
+
+apply from: '../gradle/secrets.gradle'
+
+ext.buildType = "null"
+
+android {
+    signingConfigs {
+        debug {
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storePassword 'android'
+            storeFile file('../app/src/debug/debug.keystore')
+        }
+
+        // All Other build variants have their signing managed by AppCenter
+    }
+
+    compileSdkVersion 29
+    buildToolsVersion '29.0.2'
+
+    defaultConfig {
+        applicationId 'outage.atco.outageandroid'
+        minSdkVersion 24
+        targetSdkVersion 29
+        versionCode 214
+        versionName '2.1'
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+
+        // Based on Task Name with contains the current Active Variant, set variables accordingly
+        def taskName = gradle.getStartParameter().getTaskRequests().toString()
+
+        if (taskName.contains("Alpha")) buildType = "alpha"
+        if (taskName.contains("Beta")) buildType = "beta"
+        if (taskName.contains("Debug")) buildType = "debug"
+        if (taskName.contains("Release")) buildType = "release"
+
+        // taskName is null during a Gradle File Sync. Typically overwritten immediately overwritten by app build, so can use default values safely
+        if (buildType == "null") {
+            println "Cannot parse either taskName or buildType. Defaulting to Debug configuration"
+            buildType = "debug"
+        }
+
+        println "Configuring Environmental Variables for ${buildType}"
+
+        buildConfigField "Boolean", 'IS_CI', "${getIsCI()}"
+        buildConfigField "Boolean", 'IS_CIRCLE_CI', "${getIsCircleCI()}"
+        buildConfigField "Boolean", 'IS_APP_CENTER', "${getIsAppCenter()}"
+
+        buildConfigField "String", 'ESRI_BASE_URL', getESRI_BASE_URL()
+        buildConfigField "String", 'ESRI_TOKEN_BASE_URL', getESRI_TOKEN_BASE_URL()
+        buildConfigField "String", 'ESRI_CLIENT_ID', getESRI_CLIENT_ID()
+        buildConfigField "String", 'ESRI_CLIENT_SECRET', getESRI_CLIENT_SECRET()
+        buildConfigField "String", 'ESRI_GRANT_TYPE', getESRI_GRANT_TYPE()
+        buildConfigField "String", 'REGISTRATION_BASE_URL', getREGISTRATION_BASE_URL()
+        buildConfigField "String", 'GEO_API_KEY', getGEO_API_KEY()
+
+        // Reuse Places Key in Manifest for Google Maps
+        resValue "string", "GEO_API_KEY", getGEO_API_KEY()
+
+        // Prefix buildType to app name if not Release
+        def appName = "My Electricity"
+        if (buildType != "release") {
+            appName = "${buildType.toUpperCase()}-MAE"
+        }
+        resValue "string", "APP_NAME", appName
+
+        ndk {
+            if (buildType == "debug") {
+                // Tells Gradle to build outputs for the following ABIs and package them into your APK. Required for tests to run on AppCenter
+                // https://developer.android.com/ndk/guides/abis
+                abiFilters 'armeabi-v7a', 'x86', 'arm64-v8a', 'x86_64', 'MIPS', 'MIPS64'
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false
+        }
+
+        beta {
+            initWith release
+            signingConfig signingConfigs.debug
+            versionNameSuffix "-beta"
+        }
+
+        alpha {
+            initWith debug
+            versionNameSuffix "-alpha"
+        }
+
+        debug {
+            minifyEnabled false
+            debuggable true
+            signingConfig signingConfigs.debug
+            versionNameSuffix "-debug"
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/library-core_release.kotlin_module'
+    }
+
+    lintOptions {
+        disable 'RestrictedApi'
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs = [
+                    file('src/main/res/layouts/').listFiles(),
+                    'src/main/res/layouts',
+                    'src/main/res'
+            ]
+        }
+    }
+
+}
+
+dependencies {
+    // Main
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.0-RC'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.0-RC'
+
+    // AndroidX
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+
+    // UI
+    implementation 'com.google.android.material:material:1.1.0-alpha10'
+    implementation 'com.baoyz.swipemenulistview:library:1.3.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.yarolegovich:discrete-scrollview:1.4.9'
+    implementation 'com.github.douglasjunior:android-simple-tooltip:0.2.3'
+
+    // Google Services
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.android.libraries.places:places:2.0.0'
+
+    // Firebase
+    implementation 'com.google.firebase:firebase-analytics:17.2.1'
+    implementation 'com.google.firebase:firebase-database:19.2.0'
+    implementation 'com.google.firebase:firebase-auth:19.1.0'
+    implementation 'com.google.firebase:firebase-messaging:20.0.0'
+    implementation 'com.google.firebase:firebase-dynamic-links:19.0.0'
+    implementation 'com.google.firebase:firebase-functions:19.0.1'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
+
+    // Networking
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.1.0'
+
+    // Misc
+    implementation 'com.github.barteksc:android-pdf-viewer:3.1.0-beta.1'
+    implementation 'com.mikepenz:aboutlibraries:7.0.2'
+    implementation 'com.github.razir.progressbutton:progressbutton:1.0.3'
+
+}
+
+dependencies {
+    // Testing
+    androidTestUtil 'androidx.test:orchestrator:1.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.2.0'
+    androidTestImplementation 'androidx.test:rules:1.3.0-alpha02'
+
+    // For testing on App Center https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/espresso
+    androidTestImplementation('com.microsoft.appcenter:espresso-test-extension:1.4')
+}
+
+
+// Works on Windows Powershell, but fails on Mac. On Mac, it fails because it tries to run before the app is started in the emulator/device
+// TODO: Keep for now but will have to come back and either fix or remove
+task runMonkeyTest(type: Exec) {
+    def adb = android.sdkDirectory.path + "/platform-tools/adb"
+    // Monkey Test Setup from https://developer.android.com/studio/test/monkey
+    // Specify numerical seed (after -s flag) to ensure same test run every time. Change number at end for total number of events to run
+    def monkeyScript = "$adb shell monkey -p outage.atco.outageandroid -v -s 777 --kill-process-after-error --wait-dbg 5000"
+
+    if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+        commandLine 'cmd', '/c', monkeyScript
+    } else {
+        commandLine monkeyScript
+    }
+}
+
+apply plugin: 'com.google.gms.google-services'

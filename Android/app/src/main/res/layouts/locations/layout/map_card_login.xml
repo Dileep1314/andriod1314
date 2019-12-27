@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:layout_height="120dp"
+    android:background="@color/primaryBlue"
+    app:cardBackgroundColor="@color/primaryBlue"
+    app:cardElevation="@dimen/nano_pad"
+    app:contentPadding="@dimen/nano_pad">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/small_pad">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/registerCellButton"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:backgroundTint="@color/iconBackgroundTintBlue"
+            android:clickable="false"
+            android:fontFamily="@font/atco_bodyopen_sans"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:paddingStart="@dimen/medium_pad"
+            android:paddingEnd="@dimen/tiny_pad"
+            android:text="@string/register_login"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:cornerRadius="@dimen/card_corner_radius_large"
+            app:icon="@drawable/ic_arrow_right_heavy"
+            app:iconGravity="textEnd"
+            app:iconPadding="@dimen/medium_pad"
+            app:iconSize="@dimen/small_text_size"
+            app:iconTint="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/atco_bodyopen_sans"
+            android:text="@string/locations_registration_cell_body"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registerCellButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

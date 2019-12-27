@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundGrey"
+    android:focusableInTouchMode="true">
+
+    <include
+        android:id="@+id/include3"
+        layout="@layout/app_bar_general"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView20"
+                style="@style/AppTheme.InputTitle"
+                android:layout_marginTop="16dp"
+                android:text="@string/site_id"
+                app:layout_constraintStart_toStartOf="@+id/editSiteIDLayout"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/editSiteIDLayout"
+                style="@style/AppTheme.Input"
+                android:hint="@string/locations_site_id_hint"
+                app:helperTextEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView20">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editSiteID"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/locations_site_id_hint"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="13"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView22"
+                style="@style/AppTheme.InputTitle"
+                android:layout_marginTop="8dp"
+                android:text="@string/locations_nickname_title"
+                app:layout_constraintStart_toStartOf="@+id/editSiteNicknameLayout"
+                app:layout_constraintTop_toBottomOf="@+id/editSiteIDLayout" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/editSiteNicknameLayout"
+                style="@style/AppTheme.Input"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView22">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editSiteNickname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/locations_nickname_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="textAutoComplete"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView7"
+                style="@style/AppTheme.InputTitle"
+                android:layout_marginTop="8dp"
+                android:text="@string/address"
+                app:layout_constraintStart_toStartOf="@+id/editSiteAddressLayout"
+                app:layout_constraintTop_toBottomOf="@+id/editSiteNicknameLayout" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/editSiteAddressLayout"
+                style="@style/AppTheme.Input"
+                android:hint="@string/locations_address_hint"
+                app:helperTextEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7">
+
+                <AutoCompleteTextView
+                    android:id="@+id/editSiteAddress"
+                    style="@style/Base.Widget.MaterialComponents.AutoCompleteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:dropDownWidth="wrap_content"
+                    android:dropDownHeight="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:hint="@string/locations_address_hint"
+                    android:imeOptions="actionNext"
+                    android:inputType="textNoSuggestions|textPostalAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView24"
+                style="@style/AppTheme.InputTitle"
+                android:layout_marginTop="8dp"
+                android:text="@string/locations_verification_status"
+                app:layout_constraintStart_toStartOf="@+id/editSiteAddressLayout"
+                app:layout_constraintTop_toBottomOf="@+id/editSiteAddressLayout" />
+
+            <TextView
+                android:id="@+id/editSiteVerificationText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="@string/locations_verification_status"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/editSiteVerificationInfo"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView24"
+                app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/editSiteVerificationInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                app:icon="@drawable/ic_info_blue"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/editSiteVerificationText"
+                app:layout_constraintDimensionRatio="w,1:1"
+                app:layout_constraintEnd_toEndOf="@+id/editSiteAddressLayout"
+                app:layout_constraintTop_toTopOf="@+id/editSiteVerificationText" />
+
+            <TextView
+                android:id="@+id/textView16"
+                style="@style/AppTheme.InputTitle"
+                android:layout_marginTop="8dp"
+                android:text="@string/notifications"
+                app:layout_constraintStart_toStartOf="@+id/textView24"
+                app:layout_constraintTop_toBottomOf="@+id/editSiteVerificationInfo" />
+
+            <TextView
+                android:id="@+id/editSiteNotificationText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/locations_notification_verified"
+                android:textSize="18sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/editSiteVerificationInfo"
+                app:layout_constraintStart_toStartOf="@+id/editSiteVerificationText"
+                app:layout_constraintTop_toBottomOf="@+id/textView16"
+                tools:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/editSiteNotificationsLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editSiteNotificationText">
+
+                <CheckBox
+                    android:id="@+id/editSiteEmailCheckbox"
+                    style="@style/AppTheme.BlueSquareCheckbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@color/white"
+                    android:text="@string/email" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+
+                <CheckBox
+                    android:id="@+id/editSiteTextCheckbox"
+                    style="@style/AppTheme.BlueSquareCheckbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@color/white"
+                    android:text="@string/text_message" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+
+                <CheckBox
+                    android:id="@+id/editSitePushCheckbox"
+                    style="@style/AppTheme.BlueSquareCheckbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@color/white"
+                    android:text="@string/push_notifications" />
+
+                <Switch
+                    android:id="@+id/editSiteVerboseSwitch"
+                    style="@style/AppTheme.Switches"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:paddingTop="@dimen/small_pad"
+                    android:paddingBottom="@dimen/small_pad"
+                    android:text="@string/locations_notify_planned_outage"
+                    android:textColor="@color/places_text_black_alpha_87"
+                    android:visibility="gone"
+                    tools:checked="true" />
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/locations_notification_explanation" />
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/editSiteSaveButton"
+                style="@style/AppTheme.BottomBlueButton"
+                android:layout_width="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/save"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/editSiteDeleteButton"
+                app:layout_constraintTop_toBottomOf="@+id/editSiteNotificationsLayout"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/editSiteDeleteButton"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/uniform_condensed_bold"
+                android:text="@string/delete"
+                android:textColor="@color/darkGreyColor"
+                app:backgroundTint="@color/backgroundGrey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/editSiteSaveButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editSiteNotificationsLayout"
+                app:layout_constraintVertical_bias="1.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

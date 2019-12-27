@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="outage.atco.outageandroid">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="true" />
+
+    <application
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/APP_NAME"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/GEO_API_KEY" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- Defaults for Incoming Push Messages if not provided -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/atco_logo" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/primaryBlue" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/notification_channel" />
+
+        <activity
+            android:name=".screens.MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter android:label="@string/APP_NAME">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- Firebase Dynamic Links -->
+                <!-- Accepts URIs that begin with "http://www.example.com/gizmos” -->
+                <!-- <data android:scheme="http" -->
+                <!-- android:host="www.example.com" -->
+                <!-- android:pathPrefix="/gizmos" /> -->
+                <!-- note that the leading "/" is required for pathPrefix -->
+                <data
+                    android:host="outagenotification.page.link"
+                    android:pathPrefix="/"
+                    android:scheme="https" />
+                <data
+                    android:host="atco.okta.com"
+                    android:pathPrefix="/tokens"
+                    android:scheme="https" />
+
+            </intent-filter>
+        </activity>
+
+        <service android:name=".utility.OutageMessageService"
+            android:exported="true"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".screens.startup.StartupActivity"
+            android:label="@string/APP_NAME"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".screens.startup.OnboardingActivity" />
+
+        <activity android:name=".screens.tabs.locations.sites.AddNewSiteActivity" />
+        <activity android:name=".screens.tabs.locations.sites.EditSavedLocationActivity" />
+        <activity android:name=".screens.tabs.locations.sites.SiteVerificationExplanationActivity" />
+
+        <activity android:name=".screens.tabs.reports.ReportIssueActivity" />
+
+        <activity android:name=".screens.tabs.learn.KeyIndustryActivity" />
+        <activity android:name=".screens.tabs.learn.MyBillActivity" />
+
+        <activity android:name=".screens.tabs.settings.TermsOfServiceActivity" />
+        <activity android:name=".screens.tabs.settings.account.AuthActivity" />
+        <activity android:name=".screens.tabs.settings.account.EditAccountActivity" />
+
+    </application>
+
+</manifest>

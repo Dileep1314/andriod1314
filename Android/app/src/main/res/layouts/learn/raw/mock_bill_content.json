@@ -1,0 +1,24 @@
+{
+  "Tips": {
+    "common": {
+      "retailer": "The company that provides your energy (natural gas and electricity). \n\nYour retailer buys energy and sells it to you, the customer. Your retailer also sends a monthly bill.",
+      "serviceAddress": "The address where energy services are being delivered.",
+      "siteID": "A unique identifying number for each location energy is provided. \n\nYou will have a different Site ID for natural gas and electricity. The Site ID is a 13-digit number unique to your meter and service address.",
+      "energyCharges": "This is the cost of using natural gas and electricity and includes administrative charges set by your retailer. \n\nEnergy charges are calculated by applying your retailer’s rate to the amount of energy used. \n\n\t\tNatural gas is measured in gigajoules (GJ). \n\n\t\tElectricity is measured in kilowatt hour (kWh).",
+      "meterNumber": "This is the number on the meter that measures the energy consumption at a service address. It is located on the faceplate of your meter.",
+      "meterRead": "Meter reads can be Actual Reads or Estimated Reads. The reading type should be identified on the monthly bill."
+    },
+    "electric": {
+      "distributionCharge": "This is the cost of delivering electricity from substations to homes or businesses. \n\nThese costs cover: \n\n\t\tBuilding, maintaining, upgrading & replacing power lines & facilities \n\n\t\tRoutine clearing of trees and debris from power line rights-of-way \n\n\t\t24-hour emergency response and power repair \n\n\t\tInstalling and reading electricity meters \n\n\t\tProviding consumption information to your retailer \n\n\t\tSafety and energy awareness programs \n\n\t\tCommunity based operations",
+      "transmissionCharge": "These charges cover the cost of building, operating and maintaining the transmission system. Your electricity distributor collects this amount as part of your bill on behalf of the Alberta Electric System Operator (AESO) and submits it to them. \n\nThis is the cost charged by AESO (https://www.aeso.ca/). AESO carries electricity from generating stations to your community. The rate they charge is the same for every customer in Alberta regardless of who your retailer is. \n\nThe amount you pay is based on the amount of electricity used. (Rate x kWh = transmission charge)",
+      "rateRider": "Sometimes there is a difference between what we think work costs and what it actually costs. This difference creates credits or charges (approved by the AUC) on your bill, which are used to adjust delivery costs. More than one rider may appear on the bill. \n\nATCO Electricity Rates: https://www.atco.com/en-ca/for-home/electricity/rates-billing.html",
+      "localAccessFee": "For electricity customers, a fee set by your municipality or band council to provide distribution service within the municipality. \n\nYour electricity distributor collects this amount on behalf of your local town or city and then submits it to the municipality. The LAF is comprised of the Municipal Assessment and a Franchise Tax."
+    },
+    "gas": {
+      "fixedDeliveryCharge": "These charges cover costs for building, operating and maintaining the natural gas distribution system.",
+      "variableDeliveryCharge": "This is a charge based on the amount of energy you use to cover costs for building, operating and maintaining the natural gas distribution system.",
+      "rateRiderGas": "Sometimes there is a difference between what we think work costs and what it actually costs. This difference creates credits or charges (approved by the AUC) on your bill, which are used to adjust delivery costs. More than one rider may appear on the bill. \n\nATCO Natural Gas Rates: https://www.atco.com/en-ca/for-home/natural-gas/rates-billing.html",
+      "municipalFranchiseFee": "In some communities, this fee is collected on behalf of the local government for the natural gas distribution company to access municipal land. The distribution company passes this amount along to the municipality."
+    }
+  }
+}
